@@ -1,4 +1,4 @@
-package observer.step1;
+package observer.step2;
 
 public class WeatherStation {
 

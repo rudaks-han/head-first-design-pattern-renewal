@@ -1,4 +1,4 @@
-package observer.step2;
+package observer.message;
 
 public class MessageSender {
 

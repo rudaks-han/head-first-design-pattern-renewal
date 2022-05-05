@@ -1,4 +1,4 @@
-package observer.step2;
+package observer.message;
 
 import java.util.ArrayList;
 import java.util.List;

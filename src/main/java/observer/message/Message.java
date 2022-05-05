@@ -1,4 +1,4 @@
-package observer.step2;
+package observer.message;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

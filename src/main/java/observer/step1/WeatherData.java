@@ -1,40 +1,31 @@
 package observer.step1;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class WeatherData implements Subject {
-
-    private List<Observer> observers;
-    private float temperature;
-    private float humidity;
-    private float pressure;
-
-    public WeatherData() {
-        this.observers = new ArrayList<>();
-    }
-
-    public void registerObserver(Observer o) {
-        observers.add(o);
-    }
-
-    public void removeObserver(Observer o) {
-        observers.remove(o);
-    }
-
-    public void notifyObservers() {
-        observers.stream().forEach(observer -> observer.update(temperature, humidity, pressure));
-    }
+public class WeatherData {
 
     public void measurementChanged() {
-        notifyObservers();
+
+        float temperature = getTemperature();
+        float humidity = getHumidity();
+        float pressure = getPressure();
+
+        /*
+        currentConditionDisplay.update(temperature, humidity, pressure);
+        statisticsDisplay.update(temperature, humidity, pressure);
+        forecastDisplay.update(temperature, humidity, pressure);
+
+        이부분은 바뀔 수 있는 부분으로 캡슐화해야 한다.
+        */
     }
 
-    public void setMeasurements(float temperature, float humidity, float pressure) {
-        this.temperature = temperature;
-        this.humidity = humidity;
-        this.pressure = pressure;
-        measurementChanged();
+    private float getPressure() {
+        return 0;
     }
 
+    private float getHumidity() {
+        return 0;
+    }
+
+    private float getTemperature() {
+        return 0;
+    }
 }
